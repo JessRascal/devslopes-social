@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9F0C1D297AACD0D0698253C2 /* Pods_devslopes_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61B51E1E7C4909114F3A33B /* Pods_devslopes_social.framework */; };
+		C8232F801D5136180084F303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8232F7F1D5136180084F303 /* GoogleService-Info.plist */; };
 		C87146D91D450A4C00630BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87146D81D450A4C00630BF0 /* AppDelegate.swift */; };
 		C87146DB1D450A4C00630BF0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87146DA1D450A4C00630BF0 /* SignInVC.swift */; };
 		C87146DE1D450A4C00630BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87146DC1D450A4C00630BF0 /* Main.storyboard */; };
 		C87146E01D450A4C00630BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87146DF1D450A4C00630BF0 /* Assets.xcassets */; };
 		C87146E31D450A4C00630BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87146E11D450A4C00630BF0 /* LaunchScreen.storyboard */; };
-		C87146EB1D450AB600630BF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C87146EA1D450AB600630BF0 /* GoogleService-Info.plist */; };
 		C87146F01D45223000630BF0 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87146EF1D45223000630BF0 /* FancyView.swift */; };
 		C87146F31D4522BC00630BF0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87146F21D4522BC00630BF0 /* Constants.swift */; };
 		C87146F51D45249500630BF0 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87146F41D45249500630BF0 /* RoundBtn.swift */; };
@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		99DFB80964EE0A7BFC5F3316 /* Pods-devslopes-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.release.xcconfig"; sourceTree = "<group>"; };
 		A61B51E1E7C4909114F3A33B /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8232F7F1D5136180084F303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C87146D51D450A4C00630BF0 /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87146D81D450A4C00630BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87146DA1D450A4C00630BF0 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		C87146DF1D450A4C00630BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C87146E21D450A4C00630BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C87146E41D450A4C00630BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C87146EA1D450AB600630BF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C87146EF1D45223000630BF0 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		C87146F21D4522BC00630BF0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C87146F41D45249500630BF0 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				C87146DF1D450A4C00630BF0 /* Assets.xcassets */,
 				C87146E11D450A4C00630BF0 /* LaunchScreen.storyboard */,
 				C87146E41D450A4C00630BF0 /* Info.plist */,
-				C87146EA1D450AB600630BF0 /* GoogleService-Info.plist */,
+				C8232F7F1D5136180084F303 /* GoogleService-Info.plist */,
 			);
 			path = "devslopes-social";
 			sourceTree = "<group>";
@@ -233,8 +233,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C87146EB1D450AB600630BF0 /* GoogleService-Info.plist in Resources */,
 				C87146E31D450A4C00630BF0 /* LaunchScreen.storyboard in Resources */,
+				C8232F801D5136180084F303 /* GoogleService-Info.plist in Resources */,
 				C87146E01D450A4C00630BF0 /* Assets.xcassets in Resources */,
 				C87146DE1D450A4C00630BF0 /* Main.storyboard in Resources */,
 			);

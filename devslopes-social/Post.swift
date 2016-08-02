@@ -34,7 +34,7 @@ class Post {
     
     init(caption: String, imageUrl: String, likes: Int) {
         self._caption = caption
-        self._imageUrl = caption
+        self._imageUrl = imageUrl
         self._likes = likes
     }
     
@@ -64,7 +64,6 @@ class Post {
             _likes = likes - 1
         }
         _postRef.child("likes").setValue(_likes)
-        
     }
     
 }
