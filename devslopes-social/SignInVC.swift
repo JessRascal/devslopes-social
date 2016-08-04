@@ -60,29 +60,38 @@ class SignInVC: UIViewController {
         })
     }
     @IBAction func signInTapped(_ sender: AnyObject) {
-        if let email = emailField.text, let pwd = pwdField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
-                if error == nil {
-                    print("JESS: Email user authenticated with Firebase")
-                    if let user = user {
-                        let userData = ["provider": user.providerID]
-                        self.completeSignIn(id: user.uid, userData: userData)
-                    }
-                } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
-                        if error != nil {
-                            print("JESS: Unable to authenticate with Firebase using email")
-                        } else {
-                            print("JESS: Successfully authenticated with Firebase")
-                            if let user = user {
-                                let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
-                            }
-                        }
-                    })
-                }
-            })
+//        if let email = emailField.text, let pwd = pwdField.text { // ORIGINAL
+//        if let email = emailField.text where email != "", let pwd = pwdField.text where pwd != "" { // ONE IF LET WHERE OPTION
+//        if let email = emailField.text where !email.isEmpty, let pwd = pwdField.text where !pwd.isEmpty { // ANOTHER IF LET WHERE OPTION
+        guard let email = emailField.text where !email.isEmpty else {
+            print("JESS: The email field needs to be populated")
+            return
         }
+        guard let pwd = pwdField.text where !pwd.isEmpty else {
+            print("JESS: The password field needs to be populated")
+            return
+        }
+        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+            if error == nil {
+                print("JESS: Email user authenticated with Firebase")
+                if let user = user {
+                    let userData = ["provider": user.providerID]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                }
+            } else {
+                FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                    if error != nil {
+                        print("JESS: Unable to authenticate with Firebase using email")
+                    } else {
+                        print("JESS: Successfully authenticated with Firebase")
+                        if let user = user {
+                            let userData = ["provider": user.providerID]
+                            self.completeSignIn(id: user.uid, userData: userData)
+                        }
+                    }
+                })
+            }
+        })
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {

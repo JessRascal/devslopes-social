@@ -107,7 +107,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
                 if error != nil {
-                    print("JESS: Unable to upload image to Firebasee torage")
+                    print("JESS: Unable to upload image to Firebasee storage")
                 } else {
                     print("JESS: Successfully uploaded image to Firebase storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
@@ -140,7 +140,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         print("JESS: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
-        performSegue(withIdentifier: "goToSignIn", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 
